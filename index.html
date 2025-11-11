@@ -48,8 +48,8 @@
                 'autoplay': 'autoplay',
                 'webkit-playsinline': 'webkit-playsinline',
                 'playsinline': 'playsinline'
-            }
-            document.getElementById(id).play()
+            };
+            document.getElementById("player").play()
         }
         bind(get('next'), 'click', randomm);
         bind(player, 'error', function () {
