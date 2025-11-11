@@ -44,7 +44,7 @@
         var player = get('player');
         var randomm = function () {
             player.src = 'http://av.npcq.cn/pc.php';
-            player.play();
+            player.onplay;
         }
         bind(get('next'), 'click', randomm);
         bind(player, 'error', function () {
