@@ -44,6 +44,9 @@
         var player = get('player');
         var next = get('next');
         var randomm = function () {
+            if (next.textContent === "播放"){
+                next.textContent = "下一个视频";
+            }
             player.src = 'http://av.npcq.cn/pc.php';
             player.attributes = {
                 'autoplay': 'autoplay',
@@ -62,9 +65,7 @@
             this.innerText = '连续播放: ' + (auto ? '开' : '关');
         });
         bind(player, 'ended', function () {
-            if (next.textContent === "播放"){
-                next.textContent = "下一个视频";
-            }
+            
 
             if (auto) randomm();
         });
