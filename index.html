@@ -19,7 +19,7 @@
         
         <main class="main-content">
             <div class="video-container">
-                <video id="player" src="" controls webkit-playsinline playsinline></video>
+                <video id="player" src="" controls webkit-playsinline playsinline autoplay></video>
             </div>
             
             <div class="controls">
@@ -44,7 +44,12 @@
         var player = get('player');
         var randomm = function () {
             player.src = 'http://av.npcq.cn/pc.php';
-            player.onplay;
+            player.attributes = {
+                'autoplay': 'autoplay',
+                'webkit-playsinline': 'webkit-playsinline',
+                'playsinline': 'playsinline'
+            }
+            document.getElementById(id).play()
         }
         bind(get('next'), 'click', randomm);
         bind(player, 'error', function () {
